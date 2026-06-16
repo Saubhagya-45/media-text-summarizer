@@ -2,8 +2,8 @@ from transformers import pipeline
 from utils.text_chunker import chunk_text
 
 summarizer = pipeline(
-    "summarization",
-    model="facebook/bart-large-cnn"
+    task="summarization",
+    model="sshleifer/distilbart-cnn-12-6"
 )
 
 def summarize_long_text(text, max_len, min_len):
